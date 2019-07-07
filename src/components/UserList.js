@@ -5,7 +5,7 @@ class UserList extends React.Component{
         const {users} = this.props;
         return(<div>
             <ul>
-                {users && users.map(user => (<li key={user.id}>{user.firstName} {user.lastName}</li>))}
+                {users && users.map(user => (<li key={user.id}>{user.username}</li>))}
             </ul>
         </div>)
     }

@@ -1,19 +1,22 @@
 import React from 'react';
 import UserList from "./UserList";
-import {userAdd, userList} from "../actions/action";
+import {userAdd, userListError, userListFetch, userListReceived} from "../actions/action";
 import {connect} from "react-redux";
+import {requests} from "../agent";
 const mapStateToProps = state =>({
    ...state.userList
 });
 
 const mapDispatchToProps = {
-    userList,
+    userListFetch,
     userAdd
 };
 class UserListContainer extends React.Component{
     componentDidMount() {
+
         setTimeout(this.props.userAdd,1000);
-        this.props.userList();
+        this.props.userListFetch();
+
     }
 
     render() {
