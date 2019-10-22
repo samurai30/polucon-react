@@ -1,0 +1,1 @@
+export const USER_LIST_REQUEST = 'USER_LIST_REQUEST';

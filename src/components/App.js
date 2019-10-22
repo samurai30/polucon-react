@@ -1,18 +1,17 @@
 import React from 'react';
 import {Route, Switch} from "react-router";
-import LoginForm from "./LoginForm";
-import Dashboard from "./Dashboard";
-import UserListContainer from "./UserListContainer";
+import LoginForm from "./login/index";
 
 class App extends React.Component{
+   
     render() {
         return (
             <div>
-                hello
+                <div>
+                    <h1>Navbar</h1>
+                </div>
                 <Switch>
-                    <Route path="/login" component={LoginForm}></Route>
-                    <Route path="/dashboard" component={Dashboard}/>
-                    <Route path="/users" component={UserListContainer}/>
+                    <Route path="/login" component={LoginForm}/>
                 </Switch>
             </div>
 
